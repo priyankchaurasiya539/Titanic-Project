@@ -48,3 +48,8 @@ print("MAE : " , mae)
 print("MSE : " , mse)
 print("RMSE : " , rmse)
 print("R2 score : " , score)
+
+#Save the files 
+joblib.dump(regression , "models/model.pkl")
+joblib.dump(scaler , "models/scaler.pkl")
+print("Files saved Successfully.")
