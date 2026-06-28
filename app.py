@@ -17,13 +17,12 @@ st.markdown("Titanic model project to predict the fare.")
 
 with st.sidebar:
     st.header("Passenger Inputs")
-    survived = st.number_input("Survived (0/1)", 0, 1)
     pclass = st.number_input("Passenger Class", 1, 3)
     Sibsp = st.number_input("Siblings/Spouses", 0 , 5)
     parch = st.number_input("Parents/Children", 0 , 5)
 
 #Prepare input 
-input_data = np.array([[survived , pclass , Sibsp , parch]])
+input_data = np.array([[ pclass , Sibsp , parch]])
 
 #Scale input 
 scale_input = scaler.transform(input_data)
@@ -35,4 +34,4 @@ if st.button("Predict Fare"):
     st.success(f"Prediction Value (Fare): {predictions}")
 
 #Passenger info
-st.info(f"Passenger Info : Survived = { survived } , PClass = {pclass} , SibSp = {Sibsp} , Parch = {parch}")
+st.info(f"Passenger Info : PClass = {pclass} , SibSp = {Sibsp} , Parch = {parch}")
