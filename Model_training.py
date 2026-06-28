@@ -18,7 +18,7 @@ print("-" * 100)
 
 #Define the independent and dependent feature
 
-X = df[["Survived" , "Pclass" , "SibSp" , "Parch" ]]
+X = df[[ "Pclass" , "SibSp" , "Parch" ]]
 y = df["Fare"]
 
 #train_test_split
